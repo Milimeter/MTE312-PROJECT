@@ -26,29 +26,36 @@ class AppController extends GetxController {
   StreamSubscription<bool>? _networkConnectionStream;
 
   lockDoor() async {
-    log("Trying to lock door...");
     await _checkInternetAvailability();
     if (isInternetAvailableOnCall.value == true) {
       await databaseService.writeData(state: 1);
       isLockedState(true);
+      cToast(title: "Success", message: "Door locked successfully.");
     } else {
       cToast(title: "Notice", message: "No stable internet connection");
     }
-
-    log("Door locked successfully...");
   }
 
   unLockDoor() async {
-    log("Trying to unlock door...");
     await _checkInternetAvailability();
     if (isInternetAvailableOnCall.value == true) {
       await databaseService.writeData(state: 0);
       isLockedState(false);
+      cToast(title: "Success", message: "Door unlocked successfully.");
+    } else {
+      cToast(title: "Notice", message: "No stable internet connection");
+    }
+  }
+
+  checkDoorInitState() async {
+    await _checkInternetAvailability();
+    if (isInternetAvailableOnCall.value == true) {
+      bool state = await databaseService.readData();
+      isLockedState(state);
     } else {
       cToast(title: "Notice", message: "No stable internet connection");
     }
 
-    log("Door unlocked successfully...");
   }
 
   void init() async {
@@ -83,6 +90,7 @@ class AppController extends GetxController {
     });
 
     init();
+    checkDoorInitState();
   }
 
   @override
