@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "335857389268",
+    "firebase_url": "https://esp8266-491a9-default-rtdb.firebaseio.com",
+    "project_id": "esp8266-491a9",
+    "storage_bucket": "esp8266-491a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335857389268:android:1f6778cc5164bd1ed43541",
+        "android_client_info": {
+          "package_name": "com.app.mte.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335857389268-rkns6l1k8oasong9cj0g60mh5m6fi3l7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4CSfQHO6Lvv4qK7kC789OfNL2SGi8X4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335857389268-rkns6l1k8oasong9cj0g60mh5m6fi3l7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
