@@ -53,7 +53,7 @@ class MainView extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(
-                                appController.isLockedState.value == true
+                                appController.isLockedState.value == true 
                                     ? Entypo.lock
                                     : Entypo.lock_open,
                                 color: appController.isLockedState.value == true
