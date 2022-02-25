@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_network_connectivity/flutter_network_connectivity.dart';
